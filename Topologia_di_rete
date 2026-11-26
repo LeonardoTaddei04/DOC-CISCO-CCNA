@@ -1,0 +1,29 @@
+La rete è composta da:
+1 Router 2911;
+2 Switch 1960-24TT;
+6 End Device (PC, Laptop);
+
+La prima parte collegata allo SWITCH1 ha come indirizzi IP 192.168.10.1
+La seconda parte collegata allo SWITCH2 ha come indirizzi IP 192.168.20.1
+
+Gli indirizzi sono stati assegnati tramite DHCP per entrambi le reti.
+
+Le porte fisiche utilizzare da End Device a SWITCH1 sono fa0/1 fa0/2 fa0/3
+dallo SWITCH1 al router sono fa0/4 a gig0/0
+
+Le porte fisiche utilizzare da End Device a SWITCH2 sono fa0/1 fa0/2 fa0/3
+dallo SWITCH1 al router sono fa0/4 a gig0/1
+
+Ovviamente il router ha 2 indirizzi ip default gateway che sono per la porta gig0/0 192.168.10.1
+Ovviamente il router ha 2 indirizzi ip default gateway che sono per la porta gig0/1 192.168.20.1
+
+IP END DEVICE SWITCH1
+fa0/1 192.168.10.4
+fa0/2 192.168.10.3
+fa0/3 192.168.10.2
+
+IP END DEVICE SWITCH2
+fa0/1 192.168.20.2
+fa0/2 192.168.20.3
+fa0/3 192.168.20.4
+
