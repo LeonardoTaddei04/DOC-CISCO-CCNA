@@ -27,3 +27,16 @@ fa0/1 192.168.20.2
 fa0/2 192.168.20.3
 fa0/3 192.168.20.4
 
+RETE WIRELESS
+Aggiunto un ACCESS POINT collegato alla fa0/5 di SWITCH2
+creato VLAN 30 con nome wifi ospiti e messo la porta che va dallo switch2 al router in modalità TRUNK
+Collegato l'Access Point alla porta Fa0/5 di SWITCH2 e ho impostato la porta in modalità access sulla VLAN 30
+
+Sul Router 2911
+GigabitEthernet0/1 è in (no shutdown)
+ho creato la sub-interfaccia GigabitEthernet0/1.30 incapsulata su VLAN 30 con IP 192.168.30.1/24
+creato un POOL DHCP per la rete 192.168.30.1 e escluso l'indirzzo IP 192.168.30.1
+ora un client wireless connesso all'Access Point riceve 
+un indirizzo 192.168.30.x con subnet mask 255.255.255.0 gateway 192.168.30.1
+
+
