@@ -39,4 +39,18 @@ creato un POOL DHCP per la rete 192.168.30.1 e escluso l'indirzzo IP 192.168.30.
 ora un client wireless connesso all'Access Point riceve 
 un indirizzo 192.168.30.x con subnet mask 255.255.255.0 gateway 192.168.30.1
 
+Collegamento punto-punto R1 — R2:
+10.0.12.1 su R1 e 10.0.12.2 su R2 (con no shutdown attivo).
+route statiche su R1 e R2 per permettere l'instradamento tra le reti dei due router.
+subnet R2: 192.168.50.0 / 24 (Default Gateway R2: 192.168.50.1).
+
+Server:
+Indirizzo IP statico nella subnet (es. 192.168.50.10 / 24) e Default Gateway 192.168.50.1.
+Servizio DHCP attivo e salvato con pool sulla rete 192.168.50.0/24 e default gateway 192.168.50.1.
+
+Switch lato R2 e 10 PC:
+Collegati allo switch il Router R2, il Server e i 10 PC
+10 PC DHCP ottengono IP nella rete 192.168.50.x
+gateway 192.168.50.1 
+comunicano con il gateway e con le altre reti instradate.
 
